@@ -11,4 +11,19 @@
 
 ### 3월에 태어난 여성 회원 목록 출력하기
 
+₩₩₩
+SELECT
+    member_id,
+    member_name,
+    gender,
+    to_char(DATE_OF_BIRTH, 'YYYY-MM-DD')as date_of_birth
+from
+    member_profile
+WHERE
+    TO_CHAR(DATE_OF_BIRTH, 'MM') = '03' and
+    tlno is not null AND GENDER = 'W'
+order by
+    member_id asc
+ ₩₩₩
+
 
