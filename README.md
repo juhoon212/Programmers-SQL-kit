@@ -5,6 +5,7 @@
 
 
 ![스크린샷 2023-05-07 오후 4 40 29](https://user-images.githubusercontent.com/121741140/236664521-013667c4-f489-416f-86a2-0c0e1ef1d7ed.png)
+- 2023년 5월 7일 시작
 
 ## SELECT
 
