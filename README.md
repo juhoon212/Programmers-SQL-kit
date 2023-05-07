@@ -11,7 +11,7 @@
 
 ### 3월에 태어난 여성 회원 목록 출력하기
 
-₩₩₩
+```
 SELECT
     member_id,
     member_name,
@@ -24,6 +24,13 @@ WHERE
     tlno is not null AND GENDER = 'W'
 order by
     member_id asc
- ₩₩₩
+ ```
 
+### 모든 레코드 조회하기
+
+```
+SELECT *
+FROM ANIMAL_INS
+ORDER BY ANIMAL_ID
+```
 
