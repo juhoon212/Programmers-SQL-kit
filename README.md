@@ -52,7 +52,7 @@ F.TOTAL_ORDER > 3000
 ORDER BY F.TOTAL_ORDER DESC;
 ```
 
-#### 재구매가 일어난 상품과 회원 리스트 구하기
+### 재구매가 일어난 상품과 회원 리스트 구하기
 ```
 SELECT USER_ID, PRODUCT_ID
 FROM (
