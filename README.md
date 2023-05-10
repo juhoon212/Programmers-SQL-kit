@@ -53,7 +53,6 @@ ORDER BY F.TOTAL_ORDER DESC;
 
 ### 재구매가 일어난 상품과 회원 리스트 구하기
 
-
 ```
 SELECT USER_ID, PRODUCT_ID
 FROM (
@@ -62,4 +61,3 @@ FROM (
       GROUP BY USER_ID , PRODUCT_ID) OS
 WHERE C > 1
 ORDER BY USER_ID, PRODUCT_ID DESC;
-```
