@@ -92,6 +92,14 @@ WHERE TO_CHAR(UGB.CREATED_DATE, 'YYYY-MM') = '2022-10'
 ORDER BY C_DATE, UGB.TITLE; // 일반 조인은 메인이 되는 왼쪽 테이블 기준으로 조인된다
 ```
 
+### 강원도에 위치한 생산공장 목록 출력하기
+
+```
+SELECT FACTORY_ID, FACTORY_NAME, ADDRESS
+FROM FOOD_FACTORY
+WHERE ADDRESS LIKE '강원도%'
+```
+
 ## Join
 
 
