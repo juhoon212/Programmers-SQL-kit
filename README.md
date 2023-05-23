@@ -182,3 +182,20 @@ GROUP BY FP.PRODUCT_ID, FP.PRODUCT_NAME
 ORDER BY TOTAL_SALES DESC, FP.PRODUCT_ID
 ```
 
+
+## Group by
+
+
+### 자동차 대여 기록에서 대여중 / 대여 가능 여부 구분하기
+
+```
+SELECT CAR_ID, 
+       max(
+           case when '2022-10-16' 
+           between TO_CHAR(START_DATE, 'YYYY-MM-DD') and TO_CHAR(END_DATE, 'YYYY-MM-DD' )
+           then '대여중' 
+           else '대여 가능' end) as AVAILABILITY
+FROM  CAR_RENTAL_COMPANY_RENTAL_HISTORY 
+group by car_id
+ORDER BY car_id desc // 다시 
+```
