@@ -199,3 +199,16 @@ FROM  CAR_RENTAL_COMPANY_RENTAL_HISTORY
 group by car_id
 ORDER BY car_id desc // 다시 
 ```
+
+### 저자 별 카테고리 별 매출액 집계하기
+
+```
+SELECT B.AUTHOR_ID, A.AUTHOR_NAME, B.CATEGORY, SUM(B.PRICE * BS.SALES) TOTAL_SALES
+FROM BOOK B JOIN (SELECT * 
+                 FROM BOOK_SALES BS
+                  WHERE TO_CHAR(BS.SALES_DATE, 'YYYY-MM') = '2022-01'
+                 ) BS ON B.BOOK_ID = BS.BOOK_ID JOIN AUTHOR A 
+                                                ON A.AUTHOR_ID = B.AUTHOR_ID
+GROUP BY B.AUTHOR_ID, A.AUTHOR_NAME, B.CATEGORY
+ORDER BY B.AUTHOR_ID, B.CATEGORY DESC
+```
