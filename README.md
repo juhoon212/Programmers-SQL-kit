@@ -270,6 +270,15 @@ GROUP BY B.INGREDIENT_TYPE
 ORDER BY TOTAL_ORDER
 ```
 
+### 진료과별 총 예약 횟수 출력하기
+```
+SELECT MCDP_CD 진료과코드, COUNT(*) 5월예약건수
+FROM APPOINTMENT
+WHERE YEAR(APNT_YMD) = 2022 AND MONTH(APNT_YMD) = 05
+GROUP BY 진료과코드
+order by 5월예약건수, 진료과코드
+```
+
 ## SUM,MAX,MIN
 
 ### 가격이 제일 비싼 식품의 정보 출력하기
