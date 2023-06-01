@@ -279,6 +279,19 @@ GROUP BY 진료과코드
 order by 5월예약건수, 진료과코드
 ```
 
+### 자동차 종류 별 특정 옵션이 포함된 자동차 수 구하기
+
+- MYSQL
+```
+SELECT CAR_TYPE, COUNT(*) CARS
+FROM CAR_RENTAL_COMPANY_CAR 
+WHERE OPTIONS LIKE '%통풍시트%'
+      OR  OPTIONS LIKE '%열선시트%'
+      OR  OPTIONS LIKE '%가죽시트%'
+GROUP BY CAR_TYPE
+ORDER BY CAR_TYPE
+```
+
 ## SUM,MAX,MIN
 
 ### 가격이 제일 비싼 식품의 정보 출력하기
