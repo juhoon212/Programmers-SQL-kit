@@ -431,6 +431,16 @@ FROM ANIMAL_INS
 WHERE ANIMAL_TYPE = 'DOG'
 ```
 
+### 동명 동물 수 찾기
+```
+SELECT NAME, COUNT(NAME)
+FROM ANIMAL_INS
+WHERE NAME <> ''
+GROUP BY NAME
+HAVING COUNT(NAME) >= 2
+ORDER BY NAME
+```
+
 ## SUM,MAX,MIN
 
 ### 가격이 제일 비싼 식품의 정보 출력하기
