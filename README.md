@@ -441,6 +441,21 @@ HAVING COUNT(NAME) >= 2
 ORDER BY NAME
 ```
 
+### 입양 시각 구하기(2)
+
+-MYSQL
+
+```
+SET @HOUR = -1;
+
+SELECT
+    (@HOUR := @HOUR + 1) AS HOUR, 
+    (SELECT COUNT(*) FROM ANIMAL_OUTS WHERE @HOUR = HOUR(DATETIME)) AS COUNT
+FROM ANIMAL_OUTS
+WHERE @HOUR < 23
+
+```
+
 ## SUM,MAX,MIN
 
 ### 가격이 제일 비싼 식품의 정보 출력하기
