@@ -283,6 +283,22 @@ WHERE A.SEX_UPON_OUTCOME <> B.SEX_UPON_INTAKE
 ORDER BY A.ANIMAL_ID
 ```
 
+### 그룹별 조건에 맞는 식당 목록 출력하기
+
+```
+SELECT A.MEMBER_NAME, B.REVIEW_TEXT, DATE_FORMAT(REVIEW_DATE, '%Y-%m-%d') AS REVIEW_DATE
+FROM MEMBER_PROFILE AS A JOIN REST_REVIEW AS B
+                            ON A.MEMBER_ID = B.MEMBER_ID
+WHERE A.MEMBER_ID = (
+                SELECT MEMBER_ID
+                FROM REST_REVIEW
+                GROUP BY MEMBER_ID
+                ORDER BY COUNT(REVIEW_ID) DESC 
+                LIMIT 1
+)
+ORDER BY REVIEW_DATE, REVIEW_TEXT
+```
+
 
 ## Group by
 
