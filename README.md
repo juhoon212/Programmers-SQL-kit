@@ -182,6 +182,14 @@ ORDER BY DATETIME
 LIMIT 1
 ```
 
+### 조건에 맞는 회원수 구하기
+
+```
+SELECT COUNT(*)
+FROM USER_INFO
+WHERE YEAR(JOINED) = 2021 AND AGE BETWEEN 20 AND 29
+```
+
 ## Join
 
 
