@@ -657,3 +657,17 @@ SELECT ANIMAL_TYPE,
 FROM ANIMAL_INS
 ORDER BY ANIMAL_ID
 ```
+
+### 가장 비싼 상품 구하기
+
+```
+SELECT MAX(PRICE)
+FROM PRODUCT
+```
+
+### 최댓값 구하기
+
+```
+SELECT MAX(DATETIME) AS 시간
+FROM ANIMAL_INS
+```
