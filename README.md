@@ -778,7 +778,7 @@ WHERE AGE IS NULL
 
 ## String, Date
 
-###자동차 평균 대여 기간 구하기
+### 자동차 평균 대여 기간 구하기
 
 ```
 SELECT CAR_ID, ROUND(AVG(END_DATE - START_DATE + 1), 1) AS AVERAGE_DURATION
