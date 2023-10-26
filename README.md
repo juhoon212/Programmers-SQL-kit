@@ -4,8 +4,11 @@
 
 
 
-![스크린샷 2023-05-07 오후 4 40 29](https://user-images.githubusercontent.com/121741140/236664521-013667c4-f489-416f-86a2-0c0e1ef1d7ed.png)
+
 - 2023년 5월 7일 시작
+- 2023년 6월 15일 완료
+- ![스크린샷 2023-10-26 오전 10 50 43](https://github.com/juhoon212/programmers-sql-kit/assets/121741140/b8581e74-0b2d-4245-917a-103c1eb3bfe9)
+
 
 ## SELECT
 
